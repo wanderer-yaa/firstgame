@@ -1,0 +1,107 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <title>中间活动区场景基准：洞中打坐</title>
+  <desc>水墨写意构图，用大面积墨块与留白营造洞窟氛围</desc>
+  <defs>
+    <filter id="b6" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6"/></filter>
+    <filter id="b3" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="b18" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="18"/></filter>
+    <filter id="b30" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="30"/></filter>
+    <filter id="rough" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="4" seed="21" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="26" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="rough2" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02 0.035" numOctaves="3" seed="9" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="14" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="ink" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="3" seed="11" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="5"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <radialGradient id="pool" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fdfaf0" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="#fdfaf0" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#fdfaf0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig" cx="50%" cy="46%" r="74%">
+      <stop offset="50%" stop-color="#2b2a26" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#2b2a26" stop-opacity="0.13"/>
+    </radialGradient>
+    <linearGradient id="ceil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2f2c26" stop-opacity="0.62"/>
+      <stop offset="0.55" stop-color="#3a362e" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#5b5546" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="side" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#33302a" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#33302a" stop-opacity="0.04"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="600" fill="#f4efe3"/>
+  <rect x="0" y="428" width="900" height="172" fill="#e7dfcc"/>
+
+  <ellipse cx="452" cy="392" rx="300" ry="210" fill="url(#pool)"/>
+
+  <g filter="url(#rough)">
+    <path d="M-60,-40 L960,-40 L960,110 Q840,150 762,206 Q664,276 574,246 Q482,216 402,258 Q300,310 198,272 Q76,228 -60,282 Z" fill="url(#ceil)"/>
+  </g>
+  <g filter="url(#rough2)">
+    <path d="M-60,40 Q34,108 22,214 Q12,318 44,452 L-60,452 Z" fill="url(#side)"/>
+    <path d="M960,70 Q872,146 886,246 Q898,346 866,470 L960,470 Z" fill="url(#side)" transform="translate(900,0) scale(-1,1) translate(-900,0)"/>
+  </g>
+
+  <g fill="#2f2c26" opacity="0.1" filter="url(#rough2)">
+    <path d="M120,60 Q240,26 350,64 Q240,86 120,60 Z"/>
+    <path d="M420,30 Q560,4 690,36 Q560,62 420,30 Z"/>
+    <path d="M700,96 Q800,74 890,102 Q800,122 700,96 Z"/>
+  </g>
+  <g fill="none" stroke="#2f2c26" stroke-linecap="round" filter="url(#ink)">
+    <path d="M96,132 Q140,180 128,246 Q120,300 148,352" stroke-width="2.4" opacity="0.22"/>
+    <path d="M186,196 Q222,236 210,296" stroke-width="1.4" opacity="0.14"/>
+    <path d="M760,150 Q726,208 744,272 Q756,318 736,368" stroke-width="2.2" opacity="0.18"/>
+    <path d="M822,206 Q800,262 812,318" stroke-width="1.2" opacity="0.11"/>
+  </g>
+
+  <path d="M700,0 L800,0 L648,452 L516,452 Z" fill="#ffffff" opacity="0.55" filter="url(#b30)"/>
+  <path d="M726,0 L768,0 L628,446 L566,446 Z" fill="#ffffff" opacity="0.45" filter="url(#b18)"/>
+
+  <ellipse cx="450" cy="486" rx="168" ry="18" fill="#2b2a26" opacity="0.11" filter="url(#b18)"/>
+  <path d="M306,450 Q450,432 594,450 Q450,472 306,450 Z" fill="#7d7565" opacity="0.6" filter="url(#b3)"/>
+  <path d="M306,450 Q450,472 594,450 L590,462 Q450,486 310,462 Z" fill="#4c473d" opacity="0.7" filter="url(#b3)"/>
+  <path d="M320,452 Q450,436 580,452" fill="none" stroke="#9a9180" stroke-width="1.6" opacity="0.45"/>
+
+  <g stroke="#2b2a26" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#ink)">
+    <path d="M420,368 Q396,392 394,442 Q412,450 428,442 L432,392 Z" stroke-width="2.4" fill="#2b2a26" fill-opacity="0.08"/>
+    <path d="M480,368 Q504,392 506,442 Q488,450 472,442 L468,392 Z" stroke-width="2.4" fill="#2b2a26" fill-opacity="0.08"/>
+    <path d="M422,364 C438,354 462,354 478,364 L500,444 C472,456 428,456 400,444 Z" stroke-width="2.6" fill="#2b2a26" fill-opacity="0.1"/>
+    <path d="M438,362 L450,392 L462,362" stroke-width="2"/>
+    <path d="M414,406 Q430,416 436,404" stroke-width="1.6" opacity="0.5"/>
+    <path d="M486,406 Q470,416 464,404" stroke-width="1.6" opacity="0.5"/>
+    <path d="M428,424 Q450,436 472,424" stroke-width="1.6" opacity="0.45"/>
+    <ellipse cx="450" cy="450" rx="62" ry="13" stroke-width="2.6" fill="#2b2a26" fill-opacity="0.12"/>
+    <ellipse cx="450" cy="424" rx="17" ry="7" stroke-width="2"/>
+  </g>
+
+  <path d="M400,432 Q450,446 500,432" stroke="#a8342a" stroke-width="3.4" fill="none" opacity="0.82" stroke-linecap="round" filter="url(#ink)"/>
+
+  <circle cx="450" cy="348" r="13.5" stroke="#2b2a26" stroke-width="2.6" fill="#f8f4e9" filter="url(#ink)"/>
+  <path d="M436.5,344 A13.5,13.5 0 0 1 463.5,344 Q450,350.5 436.5,344 Z" fill="#2b2a26"/>
+  <circle cx="450" cy="324" r="5.5" fill="#2b2a26"/>
+
+  <g stroke="#2b2a26" fill="none" stroke-width="1.2" opacity="0.14" stroke-linecap="round">
+    <path d="M372,300 Q396,282 418,300"/>
+    <path d="M486,292 Q512,274 534,296"/>
+  </g>
+
+  <ellipse cx="220" cy="470" rx="230" ry="16" fill="#faf6ea" opacity="0.5" filter="url(#b30)"/>
+  <ellipse cx="690" cy="512" rx="220" ry="14" fill="#faf6ea" opacity="0.45" filter="url(#b30)"/>
+  <ellipse cx="450" cy="572" rx="400" ry="22" fill="#faf6ea" opacity="0.7" filter="url(#b30)"/>
+
+  <rect width="900" height="600" fill="url(#vig)"/>
+  <rect width="900" height="600" filter="url(#grain)" opacity="0.05"/>
+</svg>

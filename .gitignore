@@ -1,0 +1,25 @@
+# ---- Godot ----
+.godot/
+*.translation
+
+# 引擎本体：工具，不是项目内容（173M）
+# 路径记录在 .workbuddy-ai/memory/MEMORY.md，换机器重新下载即可
+game/Godot_v4.7.2/
+
+# ---- 系统 ----
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ---- 编辑器 ----
+.vscode/
+.idea/
+*.swp
+
+# Obsidian 个人布局（会频繁变动，且因人而异）
+docs/.obsidian/workspace.json
+docs/.obsidian/workspace-mobile.json
+
+# ---- 临时 ----
+*.tmp
+*.log
